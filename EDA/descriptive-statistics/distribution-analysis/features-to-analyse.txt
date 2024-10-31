@@ -1,0 +1,30 @@
+# We select the important features that need to be analyzed 
+
+
+## hist- analysis-01.ipynb
+
+- Protocol
+- Timestamp 
+- Flow Duration
+- Total Fwd Packets 
+- Total Bwd Packets 
+- Total length of Fwd Packet 
+- Total length of Bwd Packet
+- Flow bytes/s 
+- Flow Packets/s
+
+## hist-analysis-02.ipynb 
+
+- Fwd IAT Total 
+- Bwd IAT Total
+- Fwd Header Length 
+- Bwd Header Length
+- Down/up Ratio 
+- Average Packet Size 
+- Fwd Bytes/Bulk avg 
+- Fwd Packet/Bulk avg 
+- Total TCP Flow time
+
+
+
+

@@ -1,0 +1,18 @@
+# These models have to be tried on the dataset 
+<<<<<<< HEAD
+- algorithms and Accuracy on test dataset after training 
+
+
+1. Decision Trees # Accuracy: 88.9% 
+2. Random Forest # Accuracy: 93.9% 
+=======
+
+1. Decision Trees 
+2. Random Forest
+>>>>>>> f206ee27fe4d264a7faf078af156dfca93b066f6
+3. Support Vector Machine 
+4. Gradient Boosting Classifier 
+5. XGBoost
+6. LightGBM 
+7. K Nearest Neighbor 
+8. Neural Networks 

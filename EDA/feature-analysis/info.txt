@@ -1,0 +1,12 @@
+The dir contains notebooks for Bi-variate and Multi-Variate analysis and correlation among them: 
+
+o	Bivariate Analysis: 
+    - Explore relationships between pairs of variables using scatter plots, correlation matrices, and heatmaps.
+o	Multivariate Analysis: 
+    - Use methods like pair plots and parallel coordinates plots to analyse relationships among multiple variables.
+
+Correlations:
+o	Correlation Matrix: 
+    - Compute and visualize the correlation between numeric variables.
+o	Heatmaps: 
+    - Use heatmaps to visualize and understand the strength of correlations.

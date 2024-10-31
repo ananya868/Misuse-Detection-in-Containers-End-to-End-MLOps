@@ -1,0 +1,91 @@
+Basic Flow Information
+----------------------------------------------------------------------------------------------------------------------
+Flow ID: A unique identifier for a network flow.
+Src IP: Source IP address of the flow.
+Src Port: Source port number of the flow.
+Dst IP: Destination IP address of the flow.
+Dst Port: Destination port number of the flow.
+Protocol: The network protocol used (e.g., TCP, UDP, ICMP).
+Timestamp: The timestamp when the flow started.
+
+Flow Duration and Packet Counts
+----------------------------------------------------------------------------------------------------------------------
+Flow Duration: The total duration of the flow in seconds.
+Total Fwd Packet: The total number of packets sent from the source to the destination.
+Total Bwd packets: The total number of packets sent from the destination to the source.
+
+Packet Size Information
+----------------------------------------------------------------------------------------------------------------------
+Total Length of Fwd Packet: The total length of all forward packets.
+Total Length of Bwd Packet: The total length of all backward packets.
+Fwd Packet Length Max, Min, Mean, Std: Maximum, minimum, mean, and standard deviation of forward packet lengths.
+Bwd Packet Length Max, Min, Mean, Std: Maximum, minimum, mean, and standard deviation of backward packet lengths.
+
+Flow Rate and Inter-arrival Time (IAT)
+----------------------------------------------------------------------------------------------------------------------
+Flow Bytes/s: The average number of bytes transferred per second during the flow.
+Flow Packets/s: The average number of packets transferred per second during the flow.
+Flow IAT Mean, Std, Max, Min: The mean, standard deviation, maximum, and minimum interarrival times for the entire flow.
+Fwd IAT Total, Mean, Std, Max, Min: The total, mean, standard deviation, maximum, and minimum interarrival times for forward packets.
+Bwd IAT Total, Mean, Std, Max, Min: The total, mean, standard deviation, maximum, and minimum interarrival times for backward packets.
+
+Flag-Based Features
+----------------------------------------------------------------------------------------------------------------------
+Fwd PSH Flags, Bwd PSH Flags: Indicate whether the push flag is set in forward and backward packets, respectively.
+Fwd URG Flags, Bwd URG Flags: Indicate whether the urgent flag is set in forward and backward packets, respectively.
+Fwd RST Flags, Bwd RST Flags: Indicate whether the reset flag is set in forward and backward packets, respectively.
+
+Header Lengths
+----------------------------------------------------------------------------------------------------------------------
+Fwd Header Length, Bwd Header Length: The length of the IP header for forward and backward packets, 
+
+Packet Length Features
+----------------------------------------------------------------------------------------------------------------------
+Packet Length Min, Max, Mean, Std: The minimum, maximum, mean, and standard deviation of packet lengths for the entire flow.
+Packet Length Variance: The variance of packet lengths, indicating the spread of packet sizes.
+
+TCP Flag Features
+----------------------------------------------------------------------------------------------------------------------
+FIN Flag Count: The number of packets with the FIN flag set.
+SYN Flag Count: The number of packets with the SYN flag set.
+RST Flag Count: The number of packets with the RST flag set.
+PSH Flag Count: The number of packets with the PSH flag set.
+ACK Flag Count: The number of packets with the ACK flag set.
+URG Flag Count: The number of packets with the URG flag set.
+CWR Flag Count: The number of packets with the CWR flag set.
+ECE Flag Count: The number of packets with the ECE flag set.
+
+Flow Direction and Rate
+----------------------------------------------------------------------------------------------------------------------
+Down/Up Ratio: The ratio of bytes transferred in the downward direction to bytes transferred in the upward direction.
+Average Packet Size: The average size of packets in the flow.
+Fwd Segment Size Avg: The average size of forward-direction segments.
+Bwd Segment Size Avg: The average size of backward-direction segments.
+Fwd Bytes/Bulk Avg, Bwd Bytes/Bulk Avg: The average number of bytes transferred per bulk of packets in the forward and backward directions.
+Fwd Packet/Bulk Avg, Bwd Packet/Bulk Avg: The average number of packets per bulk in the forward and backward directions.
+Fwd Bulk Rate Avg, Bwd Bulk Rate Avg: The average rate of bulk transfers in the forward and backward directions.
+
+Subflow-Related Features
+----------------------------------------------------------------------------------------------------------------------
+Subflow Fwd Packets: The total number of forward packets within the subflow.
+Subflow Fwd Bytes: The total number of bytes transferred in the forward direction within the subflow.
+Subflow Bwd Packets: The total number of backward packets within the subflow.
+Subflow Bwd Bytes: The total number of bytes transferred in the backward direction within the subflow.
+
+Window Size and TCP Flags
+----------------------------------------------------------------------------------------------------------------------
+FWD Init Win Bytes: The initial window size advertised by the forward flow.
+Bwd Init Win Bytes: The initial window size advertised by the backward flow.
+Fwd Act Data Pkts: The number of active data packets in the forward direction.
+
+Flow Duration and Idle Time
+----------------------------------------------------------------------------------------------------------------------
+Active Mean, Std, Max, Min: The mean, standard deviation, maximum, and minimum active times for the flow.
+Idle Mean, Std, Max, Min: The mean, standard deviation, maximum, and minimum idle times for the flow.
+Total TCP Flow Time: The total duration of the TCP flow.
+
+Label
+Label: A categorical variable indicating the classification or label assigned to the flow (e.g., "normal," "malicious").
+
+
+

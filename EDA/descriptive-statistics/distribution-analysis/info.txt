@@ -1,0 +1,30 @@
+Distribution Analysis
+
+-->
+Identifying Data Distribution
+Distribution analysis is a key step in data exploration, helping you understand how data points are spread across a range of values. Here's a detailed approach to identify the distribution of your data:
+
+
+1. Visual Inspection:
+
+- Histograms: Create histograms to see the frequency of different values. Look for patterns like skewness, modality, and outliers.
+- Box Plots: Use box plots to visualize the median, quartiles, and outliers. This helps identify the spread and central tendency of the data.
+- KDE Plots: Kernel Density Estimation plots provide a smoothed representation of the probability density function. They can reveal the shape and peaks of the distribution.
+
+
+2. Statistical Measures:
+
+- Mean and Median: Calculate the mean (average) and median (middle value) to understand the central tendency.
+- Standard Deviation and Variance: Measure the spread of the data. A high standard deviation indicates a wider spread.
+- Skewness: Determine the skewness of the distribution. A positive skew means the tail on the right side is longer, while a negative skew means the tail on the left side is longer.
+- Kurtosis: Measure the "tailedness" of the distribution. A high kurtosis indicates a heavy-tailed distribution with more extreme values.
+
+
+3. Common Distributions:
+
+- Normal Distribution (Gaussian): Symmetrical bell-shaped curve.
+- Uniform Distribution: All values have equal probability.
+- Poisson Distribution: Commonly used for count data (e.g., number of occurrences in a fixed interval).
+- Binomial Distribution: Represents the number of successes in a fixed number of Bernoulli trials.
+- Exponential Distribution: Often used for modeling waiting times or interarrival times.
+- Log-normal Distribution: Useful for modeling variables that are log-normally distributed.

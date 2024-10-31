@@ -1,0 +1,21 @@
+The directory involves two steps in EDA:
+    o   Summary Statistics: 
+            - Calculate mean, median, standard deviation, min, max, and quartiles and draw insights
+    o	Distribution Analysis: 
+            -Plot histograms, box plots, and KDE plots to understand the distribution of variables and draw insights
+
+    
+
+Note: 
+Since the number of features in this dataset is large 
+We divided the features based on their technical category (according to Computer Networking Theory)
+
+Thus, this directory includes separate files for each category 
+Each category contain specific features 
+There are total 12 categories and 1 Target feature 
+
+Examples:
+Basic Flow information (7 features), Flow Duration and Packet counts (3 features), etc .....
+
+
+Detailed information on this categorical separation is provided in the feature-info.txt file in project's base directory
