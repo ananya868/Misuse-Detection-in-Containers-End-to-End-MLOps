@@ -7,7 +7,7 @@ import pandas as pd
 # Define an abstract class for Data Preprocessing 
 class DataPreprocessing(ABC):
     @abstractmethod
-    def preprocess(self, data: pd.DataFrame) -> pd.DataFrame:
+    def process(self, data: pd.DataFrame) -> pd.DataFrame:
         """Abstract method to preprocess data."""
         pass
 
@@ -38,7 +38,6 @@ class CapOutliers(DataPreprocessing):
         """
         Initializes the CapOutliers with a specific feature.
 
-        Parameters:
         feature (str): The feature to cap outliers from.
         """
         self._features = features

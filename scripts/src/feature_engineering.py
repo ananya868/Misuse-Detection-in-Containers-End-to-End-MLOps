@@ -21,12 +21,21 @@ class FrequencyEncoding(FeatureEngineering):
     """  
     Frequency encoding of categorical columns.
     """
+    def __init__(self, cat_cols: list):
+        """
+        Initializes the FrequencyEncoding with specific categorical columns.
+
+        Parameters:
+        cat_cols (list): The list of categorical columns to encode.
+        """
+        self.cat_cols = cat_cols
+        
     def engineer(self, data: pd.DataFrame) -> pd.DataFrame:
         """Frequency encoding of categorical columns."""
         df_encoded = data.copy()
         
         # Process each column
-        for column in df_encoded.select_dtypes(include="object").columns:
+        for column in self.cat_cols:
             # Calculate frequency of each category
             freq = df_encoded[column].value_counts(normalize=True)
             
@@ -46,7 +55,7 @@ class TargetEncoding(FeatureEngineering):
         target (str): The target feature to encode.
         smoothing (float): The smoothing parameter for target encoding.    
         """
-        self._feature = feature
+        self._features = features
         self._target = target
         self._smoothing = smoothing
     
@@ -60,14 +69,14 @@ class TargetEncoding(FeatureEngineering):
             encoder = ce.TargetEncoder(cols=[column], smoothing=self._smoothing)
             
             # Fit and transform the column based on the target
-            df[column] = encoder.fit_transform(df_encoded[column], df_encoded[self._target])
+            df_encoded[column] = encoder.fit_transform(df_encoded[column], df_encoded[self._target])
 
         return df_encoded
     
 
 # Define a class for Engineering Time series feature
 class TimeSeriesFeatureEngineering(FeatureEngineering):
-    def __init__(self, features: list, format: str='ISO8601'):
+    def __init__(self, features: list, target: str, format: str='ISO8601'):
         """
         Initializes the TimeSeriesFeatureEngineering with a specific feature.
 
@@ -76,7 +85,8 @@ class TimeSeriesFeatureEngineering(FeatureEngineering):
         """
         self._features = features
         self._format = format
-
+        self._target = target
+        
     def engineer(self, data: pd.DataFrame) -> pd.DataFrame:
         """Engineer time series features."""
         df_engineered = data.copy()
@@ -134,7 +144,7 @@ class FeatureEngineeringFactory:
         Initializes the FeatureEngineeringFactory with a specific strategy.
 
         Parameters:
-        strategy (FeatureEngineering): The strategy to use for feature engineering
+            strategy (FeatureEngineering): The strategy to use for feature engineering
         """
         self._strategy = strategy
 
@@ -143,7 +153,7 @@ class FeatureEngineeringFactory:
         Set the strategy for feature engineering.
     
         Parameters:
-        strategy (FeatureEngineering): The new strategy to be used for preprocessing data.
+            strategy (FeatureEngineering): The new strategy to be used for preprocessing data.
         """
         # logging.info("Switching to different feature engineering strategy.")
         self._strategy = strategy
@@ -153,10 +163,10 @@ class FeatureEngineeringFactory:
         Feature Engineering in the data using the current strategy.
 
         Parameters:
-        data (pd.DataFrame): The input data to be processed.
+            data (pd.DataFrame): The input data to be processed.
 
         Returns:
-        pd.DataFrame: Feature Engineered data.
+            pd.DataFrame: Feature Engineered data.
         """
         return self._strategy.engineer(data)
         

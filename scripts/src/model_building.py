@@ -46,7 +46,7 @@ class GradientBoostingClassifierModel(ModelBuilding):
 
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 # Define a class for K Nearest Neighbors Classifier 
@@ -73,7 +73,7 @@ class KNNClassifierModel(ModelBuilding):
 
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 # Define a class for Light GBM classifier
@@ -99,7 +99,7 @@ class LightGBMClassifierModel(ModelBuilding):
         
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 # Define a class for RandomForest 
@@ -128,7 +128,7 @@ class RandomForestModel(ModelBuilding):
         
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 # Define a class for Support Vector Machine Model 
@@ -155,7 +155,7 @@ class SVMModel(ModelBuilding):
         
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 # Define a class for XGBoost Classifier
@@ -183,12 +183,12 @@ class XGBoostModel(ModelBuilding):
         
         # Make predictions 
         prediction = self.model.predict(X_test)
-        return prediction
+        return prediction, self.model
 
 
 
 # Concrete strategy for Model Building 
-class ModelBuildingFactory(ModelBuilding):
+class ModelBuildingFactory:
     def __init__(self, model: ModelBuilding):
         """  
         Initialize the model 
@@ -201,7 +201,7 @@ class ModelBuildingFactory(ModelBuilding):
         """
         self._model = model
 
-    def train(self, X_train, y_train, X_test):
+    def train_model(self, X_train, y_train, X_test):
         """
         Train the model using the training data
         """

@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import RobustScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -58,7 +59,7 @@ class LogTransformation(FeatureSelection):
 
 
 # Define a class for Dimensionality reduction using PCA 
-class PCA(FeatureSelection):
+class DimensionalityReduction(FeatureSelection):
     def __init__(self, n_components: int):
         # Note: The number of components is already determined via analysis done in the EDA section 
         self.n_components = n_components
@@ -74,7 +75,7 @@ class PCA(FeatureSelection):
         X_reduced = pca.fit_transform(X)
 
         # Construct data frame
-        column_names = [f'PC{i+1}' for i in range(n_components)]
+        column_names = [f'PC{i+1}' for i in range(self.n_components)]
         data_pca = pd.DataFrame(X_reduced, columns=column_names)    
 
         # Add label column back to the data
