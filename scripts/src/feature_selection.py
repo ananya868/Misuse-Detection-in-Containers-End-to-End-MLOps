@@ -87,6 +87,9 @@ class DimensionalityReduction(FeatureSelection):
 
 # Define a class for UnderSampling
 class UnderSampling(FeatureSelection):
+    def __init__(self, sampling_strategy: dict):
+        self.sampling_strategy = sampling_strategy
+
     def select(self, data: pd.DataFrame) -> pd.DataFrame:
         """UnderSampling of the majority class."""
         df_sampled = data.copy()
@@ -94,12 +97,8 @@ class UnderSampling(FeatureSelection):
         X = df_sampled.drop(columns=['Label'])
         y = df_sampled['Label']
 
-        # Process each column
-        # underSampling strategy 
-        undersampling_strategy = {0: 10000, 1: 8000, 2: 5000} # this is decided via analysis on data 
-
         # Apply Random UnderSampling to handle class imbalance
-        rus = RandomUnderSampler(sampling_strategy=undersampling_strategy, random_state=42)
+        rus = RandomUnderSampler(sampling_strategy=self.sampling_strategy, random_state=42)
         X_res, y_res = rus.fit_resample(X, y)
 
         # Convert the resampled arrays back to a DataFrame
@@ -111,6 +110,9 @@ class UnderSampling(FeatureSelection):
 
 # Define a class for Over Sampling
 class OverSampling(FeatureSelection):
+    def __init__(self, sampling_strategy: dict): 
+        self.sampling_strategy = sampling_strategy
+
     def select(self, data: pd.DataFrame) -> pd.DataFrame:
         """OverSampling of the minority class."""
         df_sampled = data.copy()
@@ -119,11 +121,8 @@ class OverSampling(FeatureSelection):
         y = df_sampled['Label']
 
         # Process each column
-        oversampling_strategy = {8: 4000, 6: 3000, 3: 2000, 4: 2000, 7: 2000, 10: 1800, 5: 1500, 9: 1500}
-        # (pre decided via data analysis done in the EDA section)
-
         # Apply SMOTE to handle class imbalance
-        smote = SMOTE(sampling_strategy=oversampling_strategy, random_state=42)
+        smote = SMOTE(sampling_strategy=self.sampling_strategy, random_state=42)
         X_res, y_res = smote.fit_resample(X, y)
 
         # Convert the resampled arrays back to a DataFrame

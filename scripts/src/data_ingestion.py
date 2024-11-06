@@ -17,8 +17,10 @@ class DataIngestor(ABC):
 class CsvDataIngestor(DataIngestor):
     def ingest(self, file_path: str) -> pd.DataFrame:
         """Ingest data from a CSV file."""
-        return pd.read_csv(file_path)
-
+        try:
+            return pd.read_csv(file_path)
+        except Exception as e:
+            print(f"Error: {e}")
 
 
 # Define a class for ZIP Data Ingestor

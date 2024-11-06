@@ -56,23 +56,25 @@ class FillMissingValuesStrategy(DataCleaner):
         fill_value (any): The constant value to fill missing values when method='constant'.
         """
         df_cleaned = data.copy()
-        if method == "mean":
+        if self.method == "mean":
             numeric_columns = df_cleaned.select_dtypes(include="number").columns
             df_cleaned[numeric_columns] = df_cleaned[numeric_columns].fillna(
                 df[numeric_columns].mean()
             )
-        elif method == "median":
+        elif self.method == "median":
             numeric_columns = df_cleaned.select_dtypes(include="number").columns
             df_cleaned[numeric_columns] = df_cleaned[numeric_columns].fillna(
                 df[numeric_columns].median()
             )
-        elif method == "mode":
+        elif self.method == "mode":
             for column in df_cleaned.columns:
                 df_cleaned[column].fillna(df[column].mode().iloc[0], inplace=True)
-        elif method == "constant":
-            df_cleaned = df_cleaned.fillna(fill_value)
+        elif self.method == "constant":
+            if fill_value is None:
+                print("[warning] --No fill value provided. Using 'None' in place of constant--")
+            df_cleaned = df_cleaned.fillna(self.fill_value)
         else:
-            logging.warning(f"Unknown method '{method}'. No missing values handled.")
+            logging.warning(f"Unknown method '{self.method}'. No missing values handled.")
 
         # logging.info("Missing values filled.")
         return df_cleaned
