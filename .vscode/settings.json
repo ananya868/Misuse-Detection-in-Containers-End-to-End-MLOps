@@ -1,10 +1,18 @@
 {
     "cSpell.words": [
         "ingestor",
+        "loguru",
+        "matplotlib",
         "Minkowski",
+        "mlflow",
+        "Optuna",
         "Preprocessings",
+        "Pydantic",
         "quantile",
+        "Scikit",
+        "seaborn",
         "Subflow",
-        "undersampled"
+        "undersampled",
+        "venv"
     ]
 }
