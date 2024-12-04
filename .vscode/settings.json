@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "iloc",
+        "imblearn",
         "ingestor",
+        "LGBM",
         "loguru",
         "matplotlib",
         "Minkowski",

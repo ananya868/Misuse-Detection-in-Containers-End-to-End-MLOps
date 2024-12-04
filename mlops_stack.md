@@ -11,7 +11,6 @@
 - **Hyperparameter Tuning** - Optuna, GridSearch 
 - **logging** - loguru
 - **Model Registry** - mlflow 
-- **Monitoring** - Grafana
 - **Lang** - Python3.11.5
 - **Testing** - PyTest 
 - **Environment Management** - Poetry, venv, pip
