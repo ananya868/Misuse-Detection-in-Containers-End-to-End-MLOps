@@ -1,0 +1,33 @@
+
+D
+$
+__dummy"
+__dummy_idJfeature_store
+ª©Åº€Ğ€‚ª©Åº€Ğ€‚
+
+~
+misuse_det_entityLA entity for misuse detection in containers using classification algorithms."
+feature_idJfeature_store
+ª©Åº€Ğ€‚ª©Åº€Ğ€‚1"$203ecf2b-3da8-4b63-a3dd-ed88dd90682e*¬¸ÅºøÍ×Í2Ğ
+—
+misuse_det_feature_viewfeature_storemisuse_det_entity"
+PC1"	Feature 1"
+PC2"	Feature 2"
+PC3"	Feature 3"
+PC4"	Feature 4"
+PC5"	Feature 5"
+PC6"	Feature 6"
+PC7"	Feature 7"
+PC8"	Feature 8"
+PC9"	Feature 9*
+releasefinal2€£:|event_timestampZdata/predictors.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors.parquet@b
+
+feature_id4
+ª©Åº€Ğ€‚à³Åºøê
+ŞÀº ßÚÁ€üºRã
+à
+,feast.infra.online_stores.sqlite.SqliteTable"¯
+…C:\Users\91790\Desktop\Projects\Misuse-Detection-in-Containers-deployed-with-Kubeflow\feature_store\feature_repo\data\online_store.db%feature_store_misuse_det_feature_viewbŒevent_timestampZdata/predictors.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors.parquetªfeature_storeŠ|
+^
+feature_storeMA project for misuse detection in containers using classification algorithms.
+ª©Åºê§_ª©Åºê§_

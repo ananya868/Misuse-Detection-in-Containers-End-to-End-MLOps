@@ -1,16 +1,16 @@
 ## Tools used in the Project 
 
-- **Data Versioning and storage** - dvc, minio - done 
-- **API Framework** - FastAPI, Pydantic - done
+- **Data Versioning and storage** - dvc, minio 
+- **API Framework** - FastAPI, Pydantic
 - **CI/CD** - Github Actions 
-- **Experiment Tracking** - Mlflow - done 
-- **Model Training** - Scikit-learn  - done
-- **EDA** - Pandas, matplotlib, seaborn, stats - done
-- **Feature and Artifact Store** - Feast, minio
-- **Feature Selection** - Optuna (try) - done
+- **Experiment Tracking** - mlflow 
+- **Model Training** - Scikit-learn 
+- **EDA** - Pandas, matplotlib, seaborn, stats 
+- **Feature and Artifact Store** - Feast, minio 
+- **Feature Selection** - Optuna (try) 
 - **Hyperparameter Tuning** - Optuna, GridSearch 
 - **logging** - loguru 
-- **Model Registry** - mlflow  
+- **Model Registry** - mlflow 
 - **Lang** - Python3.11.5
 - **Testing** - PyTest 
 - **Environment Management** - Poetry, venv, pip
