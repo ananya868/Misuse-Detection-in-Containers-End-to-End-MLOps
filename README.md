@@ -5,11 +5,8 @@ Misuse Detection in containers using classification algorithms, end-to-end imple
 ### **Development Stack**
 
 `Data Versioning and storage - DVC, minio` `API Framework - FastAPI, Pydantic` `CI/CD - Github Actions` 
-
 `Experiment Tracking - mlflow` `Model Training - Scikit-learn` `EDA - Pandas, matplotlib, seaborn, stats` 
-
 `Feature and Artifact Store - Feast, minio` `Feature Selection - Optuna` `Hyperparameter Tuning - Optuna, GridSearch` `logging - loguru` 
-
 `Lang - Python 3.11.5` `Testing- PyTest` `Environment Management - Poetry, venv, pip, Docker`
 
 ### **Problem Statement:**
