@@ -2,14 +2,8 @@
 
 Misuse Detection in containers using classification algorithms, end-to-end implemented with best-suited MlOps tools and frameworks. From data ingestion, pre-processing to model building, evalutaion and deployment, the project demonstrates an overview of all the steps involved in a data science / ML project. 
 
-### **Development Stack**
 
-`Data Versioning and storage - DVC, minio` `API Framework - FastAPI, Pydantic` `CI/CD - Github Actions` 
-`Experiment Tracking - mlflow` `Model Training - Scikit-learn` `EDA - Pandas, matplotlib, seaborn, stats` 
-`Feature and Artifact Store - Feast, minio` `Feature Selection - Optuna` `Hyperparameter Tuning - Optuna, GridSearch` `logging - loguru` 
-`Lang - Python 3.11.5` `Testing- PyTest` `Environment Management - Poetry, venv, pip, Docker`
-
-### **Problem Statement:**
+### **Problem Statement:** 📄
 Misuse detection is essential in kubernetes clusters or Docker based services. Here's why it is needed: 
 - **Protect against known threats**: Misuse detection focuses on identifying specific, known attack patterns, to safeguard from vulnerabilities that have been previously exploited.
 - **Security in Dynamic environments**: In containerized systems like Kubernetes, these are highly dynamic and often involve rapid scaling, updates. This can lead to vulnerabilities.
@@ -36,7 +30,23 @@ The project has been divided into multiple parts, be it statistical analysis, da
    - *Docker*: Consistent environment, ensuring reproducibility, and easing dependency management
    - *Feast*: Pulling real-time features for inference, or historical features for training
  
- 
+### **Development Stack** 📦
+
+- **Data Versioning and storage** - dvc, minio 
+- **API Framework** - FastAPI, Pydantic
+- **CI/CD** - Github Actions 
+- **Experiment Tracking** - mlflow 
+- **Model Training** - Scikit-learn 
+- **EDA** - Pandas, matplotlib, seaborn, stats 
+- **Feature and Artifact Store** - Feast, minio 
+- **Feature Selection** - Optuna (try) 
+- **Hyperparameter Tuning** - Optuna, GridSearch 
+- **logging** - loguru 
+- **Model Registry** - mlflow 
+- **Lang** - Python3.11.5
+- **Testing** - PyTest 
+- **Environment Management** - Poetry, venv, pip
+
 ## **How to Use?** 
 There are several ways to use the model, simplest one being API call to get predictions. Follow the instructions given below to setup the repo in your local and get started with the model -
 
@@ -119,8 +129,66 @@ docker run -d -p 8000:8000 ananya8154/misuse-detection-model
 You can now access the service at http://localhost:8000 (or http://<server-ip>:8000 if on a remote server).
 
 ## **Directory Overview**
+The file structure is spread into varying components. Given below is the complete layout and explaination of file structure in this repo. 
 
-
+- .dvc (dvc config file and gitignore file)
+- **EDA** (Exploratory Data Analysis)
+  - data-inspection : contain script for data inspection
+  - data-preprocessing : contain all pre-processing steps
+  - descriptive-statistics (used to summarize and analyze datasets)
+    - distribution-analysis : dist analysis using histograms, kde, box plots
+    - summary-statistics : scripts for central tendency, dispersian analysis
+  - feature-analysis (correlation, using scatter plot, heatmaps, etc)
+    - bivariate-analysis
+    - multivariate-analysis
+  - models : Model training on prepared data
+- **feature_store** (Feast Feature store)
+  - feature_repo (main repo for feature store)
+    - feature_def.py : script for featureview, entity definition
+    - feature_store.yaml : Feast store configuration
+    - data (contains features in offline store)
+      - predictors.parquet : most relevant features
+      - target.parquet : label
+- mlartifacts (saved models, saved after mlflow runs)
+- **notebooks**
+- **pipelines** (development and deployment pipeline)
+  - development_pipeline.py
+  - deploymeny_pipeline.py
+- **src** (implementation of core algorithms/methods)
+  - data_ingestion.py
+  - data_cleaning.py
+  - data_preprocessing.py
+  - feature_engineering.py
+  - feature_selection.py
+  - data_split.py
+  - model_building.py
+  - model_evaluation.py
+- **steps** (steps to run ml pipeline)
+  - data_ingestion_step.py
+  - data_cleaning_step.py
+  - data_preprocessing_step.py
+  - feature_engineering_step.py
+  - feature_selection_step.py
+  - data_split_step.py
+  - model_building_step.py
+  - model_evaluation_step.py
+- **tests** (Pytest test files)
+- **tuning** (Experimental runs and hyperparameter tuning)
+  - mlruns (mlflow runs folder)
+  - feast_feature_store_prep.ipynb (preparing data to upsert in feast)
+  - mlflow_experiments.ipynb (mlflow trials)
+  - optuna_tuning.ipynb (Feature selection using optuna)
+  - scores.parquet (scores data from 10+ models, best - knn_v4)
+  - sorted_by_acc.png (best model by accuracy)
+- .dvcignore (dvc ignore file)
+- **Dockerfile** (Docker definition file)
+- **app.py** (model as a FastAPI)
+- data_v.dvc (dvc file for data versions)
+- directory_template.py (a python script to create project dir)
+- logging_config.py (loguru logging configuration)
+- requirements.txt (dependencies)
+- **ml_workflow.log** (log files)
+- run_pipeline.py (run dev and deployment pipeline)
 
 
 
