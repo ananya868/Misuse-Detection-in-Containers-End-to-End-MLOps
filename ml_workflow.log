@@ -1,0 +1,50 @@
+2024-12-05 15:21:52.879 | ERROR    | steps.data_ingestion_step:data_ingestion_step:16 - Error during data ingestion: DataIngestionFactory() takes no arguments
+2024-12-05 15:24:26.566 | INFO     | steps.data_ingestion_step:data_ingestion_step:14 - Data Ingested
+2024-12-05 15:25:18.151 | INFO     | steps.data_cleaning_step:data_cleaning_step:18 - Dropping empty features
+2024-12-05 15:25:19.792 | INFO     | steps.data_cleaning_step:data_cleaning_step:20 - --Drop empty features step completed
+2024-12-05 15:25:20.104 | INFO     | steps.data_cleaning_step:data_cleaning_step:31 - --Drop missing values step completed
+2024-12-05 15:25:57.677 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:53 - Pre Processing initialized
+2024-12-05 15:25:58.071 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:55 - --Processed data by capping outliers.
+2024-12-05 15:25:59.241 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:64 - --Processed data by capping outliers with specified values.
+2024-12-05 15:26:46.924 | INFO     | steps.feature_engineering_step:feature_engineering_step:25 - Feature Engineering initialized
+2024-12-05 15:26:48.045 | INFO     | steps.feature_engineering_step:feature_engineering_step:27 - --Frequency encoding applied
+2024-12-05 15:26:49.107 | INFO     | steps.feature_engineering_step:feature_engineering_step:36 - --Target encoding applied
+2024-12-05 15:26:50.181 | INFO     | steps.feature_engineering_step:feature_engineering_step:45 - --Time series feature engineering applied
+2024-12-05 15:26:50.539 | INFO     | steps.feature_engineering_step:feature_engineering_step:54 - --Convert to float applied
+2024-12-05 15:27:40.875 | INFO     | steps.feature_selection_step:feature_selection_step:36 - Feature Selection initialized
+2024-12-05 15:28:31.290 | INFO     | steps.feature_selection_step:feature_selection_step:38 - --log transformation step completed
+2024-12-05 15:28:34.729 | INFO     | steps.feature_selection_step:feature_selection_step:57 - --Dimensionality Reduction step completed
+2024-12-05 15:28:34.947 | INFO     | steps.feature_selection_step:feature_selection_step:67 - --UnderSampling step completed
+2024-12-05 15:28:35.005 | ERROR    | steps.feature_selection_step:feature_selection_step:79 - --Over Sampling step failed. Might be due to the sampling strategy
+2024-12-05 15:35:41.866 | INFO     | steps.model_building_step:model_building_step:22 - Model Building initiated
+2024-12-05 15:35:41.870 | ERROR    | steps.model_building_step:model_building_step:41 - --Failed to build model: {model_name}
+2024-12-05 15:36:59.255 | INFO     | steps.model_building_step:model_building_step:22 - Model Building initiated
+2024-12-05 15:36:59.259 | ERROR    | steps.model_building_step:model_building_step:41 - --Failed to build model: {model_name}
+2024-12-05 15:37:02.129 | INFO     | steps.model_building_step:model_building_step:22 - Model Building initiated
+2024-12-05 15:37:02.133 | ERROR    | steps.model_building_step:model_building_step:41 - --Failed to build model: {model_name}
+2024-12-05 15:37:17.815 | INFO     | steps.model_building_step:model_building_step:22 - Model Building initiated
+2024-12-05 15:37:17.818 | ERROR    | steps.model_building_step:model_building_step:41 - --Failed to build model: {model_name}
+2024-12-05 15:37:52.234 | INFO     | steps.data_ingestion_step:data_ingestion_step:14 - Data Ingested
+2024-12-05 15:37:52.248 | INFO     | steps.data_cleaning_step:data_cleaning_step:18 - Dropping empty features
+2024-12-05 15:37:53.672 | INFO     | steps.data_cleaning_step:data_cleaning_step:20 - --Drop empty features step completed
+2024-12-05 15:37:53.898 | INFO     | steps.data_cleaning_step:data_cleaning_step:31 - --Drop missing values step completed
+2024-12-05 15:37:53.962 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:53 - Pre Processing initialized
+2024-12-05 15:37:54.152 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:55 - --Processed data by capping outliers.
+2024-12-05 15:37:54.515 | INFO     | steps.data_preprocessing_step:data_preprocessing_step:64 - --Processed data by capping outliers with specified values.
+2024-12-05 15:37:54.571 | INFO     | steps.feature_engineering_step:feature_engineering_step:25 - Feature Engineering initialized
+2024-12-05 15:37:55.624 | INFO     | steps.feature_engineering_step:feature_engineering_step:27 - --Frequency encoding applied
+2024-12-05 15:37:56.793 | INFO     | steps.feature_engineering_step:feature_engineering_step:36 - --Target encoding applied
+2024-12-05 15:37:57.616 | INFO     | steps.feature_engineering_step:feature_engineering_step:45 - --Time series feature engineering applied
+2024-12-05 15:37:57.907 | INFO     | steps.feature_engineering_step:feature_engineering_step:54 - --Convert to float applied
+2024-12-05 15:37:57.965 | INFO     | steps.feature_selection_step:feature_selection_step:36 - Feature Selection initialized
+2024-12-05 15:38:44.779 | INFO     | steps.feature_selection_step:feature_selection_step:38 - --log transformation step completed
+2024-12-05 15:38:47.826 | INFO     | steps.feature_selection_step:feature_selection_step:57 - --Dimensionality Reduction step completed
+2024-12-05 15:38:48.006 | INFO     | steps.feature_selection_step:feature_selection_step:67 - --UnderSampling step completed
+2024-12-05 15:38:48.041 | ERROR    | steps.feature_selection_step:feature_selection_step:79 - --Over Sampling step failed. Might be due to the sampling strategy
+2024-12-05 15:38:48.100 | INFO     | steps.data_split_step:data_split_step:26 - --Data split step completed successfully
+2024-12-05 15:38:48.102 | INFO     | steps.data_split_step:data_split_step:35 - --Shape: (19248, 9) | x_test: (4812, 9)
+2024-12-05 15:38:48.105 | INFO     | steps.data_split_step:data_split_step:37 - --Shape: (19248,) | y_test: (4812,)
+2024-12-05 15:38:48.122 | INFO     | steps.model_building_step:model_building_step:23 - Model Building initiated
+2024-12-05 15:38:48.652 | INFO     | steps.model_building_step:model_building_step:38 - --K Nearest Neighbors Classifier model built successfully
+2024-12-05 15:43:08.387 | INFO     | steps.model_evaluation_step:model_evaluation_step:20 - Model Evaluation initialized
+2024-12-05 15:43:08.394 | INFO     | steps.model_evaluation_step:model_evaluation_step:26 - Accuracy Score: 0.963216957605985
