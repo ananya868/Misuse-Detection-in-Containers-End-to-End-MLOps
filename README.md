@@ -4,7 +4,7 @@ Misuse Detection in containers using classification algorithms, end-to-end imple
 
 ```python
 import joblib
-model = joblib.load("tuning/artifacts/knn_v4.pkl") # best model
+model = joblib.load("tuning/artifacts/knn_v4.pkl") # best model - 96% acc
 
 # Transformed Features  
 features = [-7.5, -7.03, 2.8, -0.5, 4.5, -1.4, -1.1, 2.07, -2.1]
