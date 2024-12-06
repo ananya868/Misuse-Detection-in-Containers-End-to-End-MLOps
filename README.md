@@ -212,7 +212,11 @@ The file structure is spread into varying components. Given below is the complet
 - **ml_workflow.log** (log files)
 - run_pipeline.py (run dev and deployment pipeline)
 
+## **Contact**
+Feel free to reach me out for collaborations, queries or anything! Also, if you liked the repo, please give a start to this repo! 
 
+- Email: ananya8154@gmail.com
+- linkedIn: https://www.linkedin.com/in/ananya8154/
 
 
 
