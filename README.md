@@ -116,6 +116,8 @@ pred, model = model_building_step(x_train, y_train, x_test, model_name = "K Near
 score = model_evaluation_step(y_test, pred)
 print(f"Best Score: {score}") # 96%
 ```
+**Note** - In feature selection step, the undersampling and oversampling strategy are fixed and might not work with other variations of data. Please refer to src/feature_selection.py to find out more.
+
 **Using Docker**: 
 
 To use the model through docker, simply pull the docker image -
