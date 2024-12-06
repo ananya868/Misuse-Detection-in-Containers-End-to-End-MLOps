@@ -74,8 +74,8 @@ There are several ways to use the model, simplest one being API call to get pred
 Use Python 3.11.0 - 3.11.8 to avoid environment packages conflict. To set it up in your local -
 
 ```bash
-git clone --repo_name--
-cd --repo_name--
+git clone https://github.com/ananya868/Misuse-Detection-in-Containers-End-to-End-MLOps.git
+cd Misuse-Detection-in-Containers-End-to-End-MLOps.git
 ```
 Create a virtual env, activate it and run -
 ```bash
