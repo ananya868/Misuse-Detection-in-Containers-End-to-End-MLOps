@@ -2,6 +2,26 @@
 
 Misuse Detection in containers using classification algorithms, end-to-end implemented with best-suited MlOps tools and frameworks. From data ingestion, pre-processing to model building, evalutaion and deployment, the project demonstrates an overview of all the steps involved in a data science / ML project. 
 
+```python
+import joblib
+model = joblib.load("tuning/artifacts/knn_v4.pkl") # best model
+
+# Transformed Features  
+features = [-7.5, -7.03, 2.8, -0.5, 4.5, -1.4, -1.1, 2.07, -2.1]
+
+# Get prediction 
+prediction = model.predict(features)
+print(f"output - {prediction}") #
+
+Output - [.3]
+Node-RED RCE :
+ Occurs when vulnerabilities in the Node-RED platform,
+ such as misconfigured authentication, public exposure of the admin interface,
+ or outdated versions, allow attackers to execute arbitrary commands.
+ This can lead to unauthorized access, data theft, service disruption,
+ or escalation of privileges within containerized or Kubernetes environments."""
+```
+
 
 ### **Problem Statement:** 📄
 Misuse detection is essential in kubernetes clusters or Docker based services. Here's why it is needed: 
