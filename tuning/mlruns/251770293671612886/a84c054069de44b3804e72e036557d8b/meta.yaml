@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/artifacts/a84c054069de44b3804e72e036557d8b/artifacts
+end_time: 1733472797231
+entry_point_name: ''
+experiment_id: '251770293671612886'
+lifecycle_stage: active
+run_id: a84c054069de44b3804e72e036557d8b
+run_name: knn_v4
+run_uuid: a84c054069de44b3804e72e036557d8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733472749199
+status: 4
+tags: []
+user_id: '91790'

@@ -6,9 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# folder 
+data_v/
+
 # large files
 *.csv
-*.pkl
 
 # Distribution / packaging
 .Python
