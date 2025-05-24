@@ -7,7 +7,7 @@ import joblib
 model = joblib.load("tuning/artifacts/knn_v4.pkl") # best model - 96% acc
 
 # Transformed Features  
-features = [-7.5, -7.03, 2.8, -0.5, 4.5, -1.4, -1.1, 2.07, -2.1]
+features = [[-7.5, -7.03, 2.8, -0.5, 4.5, -1.4, -1.1, 2.07, -2.1]]
 
 # Get prediction 
 prediction = model.predict(features)
@@ -88,7 +88,7 @@ Simple Python code to use best model from pickle file -
 ```python
 import joblib
 model = joblib.load("tuning/artifacts/knn_v4.pkl") # best model 
-features = [1.1, 2.1, 1.4, 2.2, 9.4, 1.7, 6.4, 7.0, 2.0] # Sample, (1, 9)
+features = [[1.1, 2.1, 1.4, 2.2, 9.4, 1.7, 6.4, 7.0, 2.0]] # Sample, (1, 9)
 prediction = model.predict(features)
 print(f"output - {prediction}")
 ```
